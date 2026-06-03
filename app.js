@@ -53,11 +53,11 @@ async function confirmReservation()
 
 function renderConfirm()
 {
-	if (selection['ski'] === null)
+	if (selection['ski'].item === null)
 		return (changeStep(0));
-	if (selection['boot'] === null)
+	if (selection['boot'].item === null)
 		return (changeStep(1));
-	if (selection['stick'] === null)
+	if (selection['stick'].item === null)
 		return (changeStep(2));
 	const	container = document.getElementById('confirm');
 	container.innerHTML =
