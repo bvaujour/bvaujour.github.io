@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ski Rental</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id = "header">
+			<img src="assets/montain.png" alt="mountain" width="50" height="50">
+			<div id="tile-box">
+				<h2>Ski Rental</h2>
+				<p>Build your pack</p>
+			</div>
+		</div>
+		<div id = "step-bar">
+			<div class="steps active" onclick="changeStep(0)">
+				<p class="step-dot active">1</p>
+				<span>Skis</span>
+			</div>
+			<div class="steps" onclick="changeStep(1)">
+				<p class="step-dot">2</p>
+				<span>Shoes</span>
+			</div>
+			<div class="steps" onclick="changeStep(2)">
+				<p class="step-dot">3</p>
+				<span>Sticks</span>
+			</div>
+			<div class="steps" onclick="changeStep(3)">
+				<p class="step-dot">4</p>
+				<span>Confirm</span>
+			</div>
+		</div>
+		<div id = "items"></div>
+		<div id="size-selection"></div>
+		<div id="confirm"></div>
+		<script src = "app.js"></script>
+
+	</body>
+</html>
