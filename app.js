@@ -138,9 +138,6 @@ async function loadCatalog()
 	skis = await fetch(API + "/api/ski").then(r => r.json());
 	boots = await fetch(API + "/api/boot").then(r => r.json());
 	sticks = await fetch(API + "/api/stick").then(r => r.json());
-	console.log(skis);
-	console.log(boots);
-	console.log(sticks);
 	for (const ski of skis)
 		ski.sizes = ski.sizes.split(',');
 	for (const boot of boots)
