@@ -45,9 +45,19 @@ function	cleanContainers()
 
 async function confirmReservation()
 {
-	await fetch(API + `/api/reserve/ski/${selection['ski'].item.id}`, { method: "POST" });
-	await fetch(API + `/api/reserve/boot/${selection['boot'].item.id}`, { method: "POST" });
-	await fetch(API + `/api/reserve/stick/${selection['stick'].item.id}`, { method: "POST" });
+	await fetch("/api/reserve",
+	{
+		method: "POST",
+		headers:
+		{
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({
+			ski_id: selection['ski'].item.id,
+			boot_id: selection['boot'].item.id,
+			stick_id: selection['stick'].item.id,
+		}),
+	});
 	location.reload();
 }
 
